@@ -1,13 +1,3 @@
-/*
- * @Author: iowen
- * @Author URI: https://www.iowen.cn/
- * @Date: 2021-06-03 08:55:59
- * @LastEditors: iowen
- * @LastEditTime: 2023-02-03 00:17:23
- * @FilePath: \onenav\js\comments-ajax.js
- * @Description: 
- */
-
 var _list = 'comment-list'; 
 var cancel = $('#cancel-comment-reply-link');
 
