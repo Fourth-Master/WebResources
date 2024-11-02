@@ -1,31 +1,4 @@
-
-
-var OriginTitile=document.title,
-titleTime;
-document.addEventListener("visibilitychange",
-function(){
-if(document.hidden){
-document.title="🔥 你有1条新的未读消息！";
-clearTimeout(titleTime)
-}else{
-document.title="🎉 你又回来啦！" ;
-titleTime=setTimeout(function(){
-document.title=OriginTitile
-},
-2000)
-}});
-//顶部彩色滚动进度条
-$(window).scroll(function() {
-    var a = $(window).scrollTop(),
-    c = $(document).height(),
-    b = $(window).height();
-    scrollPercent = a / (c - b) * 100;
-    scrollPercent = scrollPercent.toFixed(1);
-    $("#percentageCounter").css({
-        width: scrollPercent + "%"
-    });
-}).trigger("scroll");
-
+//输入框特效
 (function webpackUniversalModuleDefinition(root, factory) {
     if (typeof exports === 'object' && typeof module === 'object') module.exports = factory();
     else if (typeof define === 'function' && define.amd) define([], factory);
@@ -216,6 +189,33 @@ $(window).scroll(function() {
     }])
 });
 
+//标题特效
+var OriginTitile=document.title,
+titleTime;
+document.addEventListener("visibilitychange",
+function(){
+if(document.hidden){
+document.title="🔥 你有1条新的未读消息！";
+clearTimeout(titleTime)
+}else{
+document.title="🎉 你又回来啦！" ;
+titleTime=setTimeout(function(){
+document.title=OriginTitile
+},
+2000)
+}});
+//顶部彩色滚动进度条
+$(window).scroll(function() {
+    var a = $(window).scrollTop(),
+    c = $(document).height(),
+    b = $(window).height();
+    scrollPercent = a / (c - b) * 100;
+    scrollPercent = scrollPercent.toFixed(1);
+    $("#percentageCounter").css({
+        width: scrollPercent + "%"
+    });
+}).trigger("scroll");
+
 /* 禁用F12按键并提醒 */
 document.onkeydown = function () {
 if (window.event && window.event.keyCode == 123) {
@@ -270,3 +270,27 @@ document.addEventListener("copy",function(e){
         }
     })
 })
+
+POWERMODE.colorful = true; // ture 为启用礼花特效
+POWERMODE.shake = false; // false 为禁用震动特效
+document.body.addEventListener('input', POWERMODE);
+//网站运行时间
+function show_date_time() {
+  window.setTimeout("show_date_time()", 1000);
+  var BirthDay = new Date("10/30/2024 00:00:00"); // 修改时间
+  var today = new Date();
+  var timeold = (today.getTime() - BirthDay.getTime());
+  var sectimeold = timeold / 1000
+  var secondsold = Math.floor(sectimeold);
+  var msPerDay = 24 * 60 * 60 * 1000
+  var e_daysold = timeold / msPerDay
+  var daysold = Math.floor(e_daysold);
+  var e_hrsold = (e_daysold - daysold) * 24;
+  var hrsold = Math.floor(e_hrsold);
+  var e_minsold = (e_hrsold - hrsold) * 60;
+  var minsold = Math.floor((e_hrsold - hrsold) * 60);
+  var seconds = Math.floor((e_minsold - minsold) * 60);
+  var span_dt_dt = document.getElementById('span_dt_dt');
+  span_dt_dt.innerHTML = '<font style=color:#fff>' + daysold + ' 天</font> <font style=color:#fff>' + hrsold + ' 时</font> <font style=color:#fff>' + minsold + ' 分</font> <font style=color:#fff>' + seconds + ' 秒</font> ';
+}
+show_date_time();
