@@ -387,3 +387,28 @@ textarea.comment-textarea[data-v-18ee0e41]:focus {
 .footer-badge .bg-working {
   background-color: #8eaf33
 }
+.content-warp pre::before {
+    content: "";
+    display: block;
+    background: #fc625d;
+    top: 9px;
+    left: 15px;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    box-shadow: 16px 0 #fdbc40, 32px 0 #35cd4b;
+    margin: 0px 2px -7px;
+    z-index: 1000;
+    position: absolute;
+}
+ 
+.content-warp pre {
+    max-height: unset;
+    padding: 0 0.5em 0 0.5em;
+    background: #2d3748;
+}
+ 
+.content-warp pre code {
+    margin-top: 30px;
+    border-top: 1px dashed var(--plane-note-color);
+}
