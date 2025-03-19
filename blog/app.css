@@ -177,7 +177,7 @@ height: 73px;
 /*导航栏添加背景图和透明效果*/
 header {
     background-color: rgba(255, 255, 255, 0.5) !important;
-    background-image: url(/gh/Fourth-Master/WebResources@1.03/blog/nav.png);
+    background-image: url(/gh/Fourth-Master/WebResources/blog/nav.png);
     background-position: center right;
     background-size: auto 100%;
     box-shadow: 0px 5px 40px 0px rgba(17,58,93,0.1) !important;
@@ -255,7 +255,7 @@ to {
 
 /*评论背景图*/
 textarea.comment-textarea[data-v-18ee0e41] {
-    background-color:transparent;background:linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),url(/gh/Fourth-Master/WebResources@1.03/blog/comment.png) right 10px bottom 10px no-repeat;-moz-transition:ease-in-out 0.45s;-webkit-transition:ease-in-out 0.45s;-o-transition:ease-in-out 0.45s;-ms-transition:ease-in-out 0.45s;transition:ease-in-out 0.45s;
+    background-color:transparent;background:linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),url(/gh/Fourth-Master/WebResources/blog/comment.png) right 10px bottom 10px no-repeat;-moz-transition:ease-in-out 0.45s;-webkit-transition:ease-in-out 0.45s;-o-transition:ease-in-out 0.45s;-ms-transition:ease-in-out 0.45s;transition:ease-in-out 0.45s;
 }
 textarea.comment-textarea[data-v-18ee0e41]:focus {
     background-position-y:789px;-moz-transition:ease-in-out 0.45s;-webkit-transition:ease-in-out 0.45s;-o-transition:ease-in-out 0.45s;-ms-transition:ease-in-out 0.45s;transition:ease-in-out 0.45s;
