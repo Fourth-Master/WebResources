@@ -238,4 +238,21 @@ function show_date_time() {
   var span_dt_dt = document.getElementById('span_dt_dt');
   span_dt_dt.innerHTML = '<font style=color:#fff>' + daysold + ' 天</font> <font style=color:#fff>' + hrsold + ' 时</font> <font style=color:#fff>' + minsold + ' 分</font> <font style=color:#fff>' + seconds + ' 秒</font> ';
 }
-show_date_time();
+window.onload = function() {
+    show_date_time();
+};
+document.addEventListener("copy",function(e){
+    new Vue({
+        data:function(){
+            this.$notify({
+                title:"嘿！复制成功",
+                message:"若要转载请务必保留四爷手札原文链接！爱你呦~",
+                position: 'bottom-right',
+                offset: 50,
+                showClose: false,
+                type:"success"
+            });
+            return{visible:false}
+        }
+    })
+})
