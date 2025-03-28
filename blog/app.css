@@ -416,3 +416,11 @@ header[data-v-13d7c0e2]{
     background-color: rgba(255, 255, 255, 0.5) !important;
     backdrop-filter: saturate(5) blur(20px);
 }
+.smartphoto {
+    backdrop-filter: blur(2px) !important;
+    background-color: #373737d1 !important;
+}
+
+.post-warp .content-warp ul li {
+    margin: 0 35px 0 3em;
+}
